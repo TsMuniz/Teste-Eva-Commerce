@@ -1,9 +1,14 @@
+import Logo from '../../atoms/logo'
+import CategoryList from '../../molecules/CategoryList'
+import SearchBar from '../../molecules/SearchBar'
 import HeaderWrapper from './styles'
 
 export default function Header() {
   return (
     <HeaderWrapper>
-      <h1>oi</h1>
+      <Logo />
+      <CategoryList />
+      <SearchBar/>
    </HeaderWrapper>
   )
 }
