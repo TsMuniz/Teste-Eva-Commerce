@@ -1,6 +1,9 @@
+import CategoryWrapper from './styles'
 
 export default function CategoryItem() {
   return (
-    <div>CategoryItem</div>
+    <CategoryWrapper>
+      
+    </CategoryWrapper>
   )
 }
