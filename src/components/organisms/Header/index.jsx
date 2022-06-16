@@ -1,9 +1,9 @@
 import HeaderWrapper from './styles'
 
-export default function Header({children}) {
+export default function Header() {
   return (
     <HeaderWrapper>
-      {children}
+      <h1>oi</h1>
    </HeaderWrapper>
   )
 }
