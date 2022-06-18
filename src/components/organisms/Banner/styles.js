@@ -15,9 +15,9 @@ const BannerWrapper = styled.section`
       z-index: 0;
       flex-basis: 100%;
       border: 1px solid black;
+      transform: matrix(1, -0.05, 0.07, 1, 0, 0);
       img {
-        transform: matrix(1, -0.05, 0.07, 1, 0, 0);
-        width: 100%;
+        width: 100%
       }
     }
     &.scrollCircle {
