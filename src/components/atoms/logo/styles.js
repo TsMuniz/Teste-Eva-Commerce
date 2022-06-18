@@ -1,11 +1,13 @@
 import styled from 'styled-components'
 
 const LogoWrapper = styled.div`
-  width: 4rem;
-  height: 4rem;
-
+  display: flex;
+  align-items: center;
+  padding-block: 1.6rem;
+  margin-right: 8rem;
   img{
-    width: 100%;
+    width: 8rem;
+  height: 3.2rem;
   }
 `
 
