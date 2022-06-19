@@ -2,34 +2,22 @@ import styled from 'styled-components'
 
 const BannerWrapper = styled.section`
   position: relative;
-  border: none;
-  div {
-    border: none;
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0% 100%);
+  
+  div{
+    overflow-y: hidden;
     display: flex;
     overflow-x: auto;
     scroll-behavior: smooth;
     flex: none;
     z-index: 1;
-    &.item { 
-      border: none;
-      z-index: 0;
-      flex-basis: 100%;
-      border: 1px solid black;
-      transform: matrix(1, -0.05, 0.07, 1, 0, 0);
-      img {
-        width: 100%
-      }
-    }
-    &.scrollCircle {
-      position: absolute;
-      left: 50%;
-      bottom: 10%;
-    }
-    
+
     &::-webkit-scrollbar {
-      display: none;
+      display: none
     }
+
   }
+ 
 
 `
 

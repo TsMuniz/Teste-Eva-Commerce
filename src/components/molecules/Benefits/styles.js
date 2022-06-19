@@ -5,15 +5,19 @@ const BenefitsWrapper = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 23rem;
   div {
     display: flex;
     font-size: 1.6rem;
     flex-direction: column;
+    gap: 1rem;
     justify-content: space-evenly;
     align-items: center;
     color: ${({theme}) => theme.accentColor};
-    gap: 1.5rem;
+    border-right: 1px solid #DADFEB;
+    padding-inline: 6.4rem;
+    &:last-child {
+      border: none;
+    }
   }
 `
 

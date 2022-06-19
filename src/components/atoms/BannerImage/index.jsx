@@ -1,5 +1,9 @@
-import styles from './bannerImage.module.css'
+import ImageWrapper from './styles'
 
-export default function BannerImage({url}) {
-  return <div className={ styles.image } />
+export default function BannerImage({image}) {
+  return <ImageWrapper>
+    <div>
+      <img src={image} alt="asdasd" />
+    </div>
+  </ImageWrapper>
 }

@@ -11,7 +11,7 @@ export default function Benefits() {
         Site seguro
       </div>
       <div>
-        <img src={cartao} alt="icone de um cartao na cor rosa" />
+        <img src={cartao} alt="icone de um cartao de cŕedito na cor rosa" />
         Até 12x sem juros
       </div>
       <div>

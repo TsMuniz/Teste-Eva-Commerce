@@ -1,6 +1,6 @@
 import Logo from '../../atoms/logo'
 import Cart from '../../molecules/Cart'
-import CategoryList from '../../molecules/CategoryList'
+import CategoryDropDownList from '../../molecules/CategoryDropDownList'
 import MyAcount from '../../molecules/MyAcount'
 import SearchBar from '../../molecules/SearchBar'
 import HeaderWrapper from './styles'
@@ -11,7 +11,7 @@ export default function Header() {
   return (
     <HeaderWrapper>
       <Logo />
-      <CategoryList categories={bb} />
+      <CategoryDropDownList categories={bb} />
       <SearchBar />
       <MyAcount />
       <Cart quantity="0"/>

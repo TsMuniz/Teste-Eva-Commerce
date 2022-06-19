@@ -1,12 +1,20 @@
 import { useEffect, useRef } from 'react'
-import banner from '../../../assets/images/banner.avif'
-import bullet from '../../../assets/svg/bullet.svg'
+import banner from '../../../assets/images/banner.jpeg'
 import BannerImage from '../../atoms/BannerImage'
+import BannerBullets from '../../molecules/BannerBullets'
 import BannerWrapper from './styles'
 
 
 export default function Banner() {
-  const carousel = useRef(null)
+  const BannerRef = useRef(null)
+  
+  const SwipeBannerLeft = () => {
+    BannerRef.current.scrollLeft += BannerRef.current.offsetWidth
+  }
+
+  const SwipeBannerToStart = () => {
+    BannerRef.current.scrollLeft -= BannerRef.current.offsetWidth * 3
+  }
 
   useEffect(() => {
     
@@ -15,10 +23,10 @@ export default function Banner() {
     const intervalID = setInterval(() => {      
       if (scrollCounter < 3) {
         scrollCounter += 1        
-        return carousel.current.scrollLeft += carousel.current.offsetWidth
+        return SwipeBannerLeft()
       }      
       scrollCounter = 0
-      carousel.current.scrollLeft -= carousel.current.offsetWidth * 3
+      SwipeBannerToStart()
     }, 4000)
     
     return () => clearInterval(intervalID)
@@ -26,27 +34,14 @@ export default function Banner() {
   
   
   return (
-    <BannerWrapper >
-      <div className='carousel' ref={carousel}>
-       
-        <BannerImage  clasName="item" url='../../../assets/images/banner.png' />
-        
-        <div className='item'>
-          <img src={ banner } alt="asdasdasd" />
-        </div>
-        <div className='item'>
-          <img src={ banner } alt="asdasdasd" />
-        </div>
-        <div className='item'>
-          <img src={ banner } alt="asdasdasd" />
-        </div>
-        <div className='scrollCircle'>
-          <img src={ bullet } alt="asdasdasd" />
-          <img src={ bullet } alt="asdasdasd" />
-          <img src={ bullet } alt="asdasdasd" />
-          <img src={ bullet } alt="asdasdasd" />
-        </div>
-      </div>
+    <BannerWrapper  >
+      <div ref={BannerRef} >
+        <BannerImage image={ banner } />            
+        <BannerImage image={ banner }/>          
+        <BannerImage image={ banner }/>            
+        <BannerImage image={ banner }/>      
+      </div>    
+      <BannerBullets/>    
     </BannerWrapper>
    
   )

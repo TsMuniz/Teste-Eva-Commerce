@@ -1,13 +1,15 @@
 import { useState } from 'react'
 import setaCategorias from '../../../assets/svg/setaCategorias.svg'
-import CategoryItem from '../../atoms/CategoryItem'
+import CategoryDropDownListItem from '../../atoms/CategoryDropDownListItem'
 import CategoryListWrapper from './styles'
 
-export default function CategoryList({ categories }) {
+export default function CategoryDropDownList({ categories }) {
   const [showCategoryList, setShowCategoryList] = useState(false)
+
   const listCategories = (categories) => {
+    
     const categoriesList = categories.map((category, index) => (
-      < CategoryItem key={`${category}${index}`} category= { category } />)      
+      < CategoryDropDownListItem key={`${category}${index}`} category= { category } />)      
     )
       
     return categoriesList

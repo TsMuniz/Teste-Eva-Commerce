@@ -4,11 +4,12 @@ const SearchBarWrapper = styled.div`
   display: flex;
   align-items: center;
   background-color: #FDFDFD;
-  width: 45rem;
+  flex-basis: 45rem;
   border-radius: 0.4rem;
   height: 3.2rem;
   border: none;
   padding-inline-end: 0.8rem;
+  flex-shrink: 2;
 
   input {
     flex-grow: 1;
