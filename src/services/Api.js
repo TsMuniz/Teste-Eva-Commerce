@@ -53,4 +53,7 @@ export {
 }
 
 
-getAllProducts(URL).then((response) => console.log(response.data))
+
+
+
+
