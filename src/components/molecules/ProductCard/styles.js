@@ -6,7 +6,6 @@ const ProductCardWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 50rem;
   border-radius: 0.4rem;
   transition: 0.2s;
 
@@ -96,13 +95,7 @@ const ProductCardWrapper = styled.div`
       font-weight: 400;
       line-height: 19px;
     }
-    
-    &:hover {
-      background-color: #F7FAFF;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    } 
+  
   }
 `
 export default ProductCardWrapper
