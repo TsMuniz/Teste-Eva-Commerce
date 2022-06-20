@@ -31,7 +31,7 @@ export default function ProductCard(
         
         <div className="product_price_container">
           <p>{oldPrice}</p>
-          <h2>{`R$ ${currentPrice}`}</h2>        
+          <h2>{`R$ ${Number(currentPrice).toFixed(2)}`}</h2>        
         </div>
         
         <span>Ou R$ 00,00 com 5% off no boleto</span>

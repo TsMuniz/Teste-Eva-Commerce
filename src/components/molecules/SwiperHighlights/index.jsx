@@ -1,37 +1,34 @@
-import { useEffect, useRef, useState } from 'react'
-import setaCategoria from '../../../assets/svg/setaCategorias.svg'
-import { getAllProducts, URL } from '../../../services/Api'
-import ProductCard from '../ProductCard'
+import { useRef } from 'react'
+import { IoIosArrowBack } from 'react-icons/io'
 import SwiperHighlightsWrapper from './styles'
 
 
-export default function SwiperHighlights() {
+export default function SwiperHighlights({children}) {
   const swiper = useRef(null)
-   const [products, setProducts] = useState([])
+  
+  const SwipeToLeft = () => {
+    swiper.current.scrollLeft += swiper.current.offsetWidth
+  }
 
-  useEffect(() => {
-    getAllProducts(URL).then(response => setProducts(response.data))
-  }, [])
-
-  if (products === null) return null
+  const SwipeToRight = () => {
+    swiper.current.scrollLeft -= swiper.current.offsetWidth
+  }
 
   return (
     <SwiperHighlightsWrapper >
-      <img src={setaCategoria} alt="Icone de uma seta" />
+      <IoIosArrowBack
+        className='arrow_left'
+        onClick={SwipeToRight}
+      /> 
+
       <div ref={swiper} className="swiper">
-        {products.map((product) => {
-          return (
-            <ProductCard
-              image={product?.images_product[0]?.path}
-              description={product.name}
-              oldPrice={product.promotional_price}
-              rating={product.stars}
-              currentPrice={product.price}
-            />
-          )})
-        }
+        {children}
       </div>
-      <img src={setaCategoria} alt="Icone de uma seta" />
+
+      <IoIosArrowBack
+        className='arrow_right'
+        onClick={SwipeToLeft}
+      />
     </SwiperHighlightsWrapper>
   )
 }

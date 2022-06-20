@@ -1,8 +1,8 @@
 import Benefits from '../../components/molecules/Benefits'
 import CategoriesSection from '../../components/molecules/CategoriesSection'
-import SwiperHighlights from '../../components/molecules/SwiperHighlights'
 import Banner from '../../components/organisms/Banner'
 import Header from '../../components/organisms/Header'
+import HighLightsSection from '../../components/organisms/highLightsSection'
 import MainPageTemplate from '../../templates/MainPageTemplate'
 
 
@@ -15,8 +15,7 @@ export default function MainPage() {
       <Banner />
       <Benefits />
       <CategoriesSection />
-
-      <SwiperHighlights/>
+      <HighLightsSection/>
     </MainPageTemplate>
   )
 }

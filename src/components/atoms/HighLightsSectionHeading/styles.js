@@ -8,12 +8,14 @@ const HighLightsSectionHeadingWrapper = styled.div`
     font-size: 2.4rem;
     line-height: 2.8rem;
     align-items: flex-start;
+    margin-left: 16.5rem;
+    margin-bottom: 4.2rem;
 
     &::before {
       content: '';
       width: 6.4rem;
       height: 0;
-      border: 0.4rem solid ${({theme}) => theme.accentColor};
+      border: 4px solid ${({theme}) => theme.accentColor};
     }
   }
 

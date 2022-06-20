@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import banner from '../../../assets/images/banner.jpeg'
 import BannerImage from '../../atoms/BannerImage'
 import BannerBullets from '../../molecules/BannerBullets'
@@ -7,6 +7,7 @@ import BannerWrapper from './styles'
 
 export default function Banner() {
   const BannerRef = useRef(null)
+  let [scrollPosition, setScrollPosition] = useState(0)
   
   const SwipeBannerLeft = () => {
     BannerRef.current.scrollLeft += BannerRef.current.offsetWidth
@@ -23,9 +24,11 @@ export default function Banner() {
     const intervalID = setInterval(() => {      
       if (scrollCounter < 3) {
         scrollCounter += 1        
+        setScrollPosition(scrollCounter)
         return SwipeBannerLeft()
       }      
       scrollCounter = 0
+      setScrollPosition(scrollCounter)
       SwipeBannerToStart()
     }, 4000)
     
@@ -41,7 +44,7 @@ export default function Banner() {
         <BannerImage image={ banner }/>            
         <BannerImage image={ banner }/>      
       </div>    
-      <BannerBullets/>    
+      <BannerBullets scrollPosition={scrollPosition}/>    
     </BannerWrapper>
    
   )

@@ -19,7 +19,6 @@ export default function Rating({rating}) {
             key={`${star}${index}`}
             src={star}
             alt="ícone de uma estrela"
-
           />)
       })}
     </RatingWrapper>
