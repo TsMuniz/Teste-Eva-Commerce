@@ -12,6 +12,18 @@ const Base = createGlobalStyle`
     font-size: 62.5%; 
     font-family: 'Roboto', sans-serif;
   }
+
+  ::-webkit-scrollbar {
+    width: 10px;
+    background-color: ${({theme}) => theme.primaryColor};
+    border-radius: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: ${({theme}) => theme.accentColor};
+    border-radius: 8px;
+  }
+  
 `
 
 export { Base, theme }

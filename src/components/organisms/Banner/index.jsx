@@ -7,14 +7,15 @@ import BannerWrapper from './styles'
 
 export default function Banner() {
   const BannerRef = useRef(null)
+  const scrollBarWidth = 10
   let [scrollPosition, setScrollPosition] = useState(0)
   
   const SwipeBannerLeft = () => {
-    BannerRef.current.scrollLeft += BannerRef.current.offsetWidth
+    BannerRef.current.scrollLeft += (BannerRef.current.offsetWidth + scrollBarWidth)
   }
 
   const SwipeBannerToStart = () => {
-    BannerRef.current.scrollLeft -= BannerRef.current.offsetWidth * 3
+    BannerRef.current.scrollLeft -= (BannerRef.current.offsetWidth + scrollBarWidth) * 3
   }
 
   useEffect(() => {
