@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Benefits from '../../components/molecules/Benefits'
 import CategoriesSection from '../../components/molecules/CategoriesSection'
 import Banner from '../../components/organisms/Banner'
+import ContactForm from '../../components/organisms/ContactForm'
 import Header from '../../components/organisms/Header'
 import HighLightsSection from '../../components/organisms/highLightsSection'
 import { getAllCategories, getAllProducts, URL } from '../../services/Api'
@@ -52,6 +53,7 @@ export default function MainPage() {
           />
         )
       })}
+      <ContactForm/>
     </MainPageTemplate>
   )
 }
