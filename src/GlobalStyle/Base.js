@@ -23,7 +23,8 @@ const Base = createGlobalStyle`
     background-color: ${({theme}) => theme.accentColor};
     border-radius: 8px;
   }
-  
+  body {
+  }
 `
 
 export { Base, theme }

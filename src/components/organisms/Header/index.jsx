@@ -1,3 +1,4 @@
+import { MdOutlineMenu } from 'react-icons/md'
 import Logo from '../../atoms/logo'
 import Cart from '../../molecules/Cart'
 import CategoryDropDownList from '../../molecules/CategoryDropDownList'
@@ -14,7 +15,8 @@ export default function Header() {
       <CategoryDropDownList categories={bb} />
       <SearchBar />
       <MyAcount />
-      <Cart quantity="0"/>
+      <Cart quantity="0" />
+      <MdOutlineMenu className='menuMobileIcon'/>
    </HeaderWrapper>
   )
 }

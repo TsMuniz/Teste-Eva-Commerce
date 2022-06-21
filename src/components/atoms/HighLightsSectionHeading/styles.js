@@ -10,8 +10,9 @@ const HighLightsSectionHeadingWrapper = styled.div`
     align-items: flex-start;
     margin-left: 16.5rem;
     margin-bottom: 4.2rem;
-
+    
     &::before {
+      margin-left: 0.15rem;
       content: '';
       width: 6.4rem;
       height: 0;

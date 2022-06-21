@@ -11,6 +11,9 @@ const MyAcountWrapper = styled.div`
     width: 1.4rem;
     height: 1.6rem;
   }
+  @media(max-width: 900px) {
+  display: none;
+ }
 `
 
 export default MyAcountWrapper

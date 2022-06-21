@@ -13,17 +13,6 @@ const getAllCategories = async (url) => {
 
 }
 
-const getCategory = async (url, id) => {
-
- try {
-  const category = await axios.get(`${url}category/${id}`)
-  return category
- } catch (error) {
-  return error.message  
- }
-  
-}
-
 const getAllProducts = async (url) => {
   
  try {
@@ -34,22 +23,9 @@ const getAllProducts = async (url) => {
   }
 }
 
-const getProduct = async (url, id) => {
-
- try {
-  const category = await axios.get(`${url}product/${id}`)
-  return category
- } catch (error) {
-  return error.message  
- }
-  
-}
-
 export {
   getAllCategories,
-  getCategory,
   getAllProducts,
-  getProduct
 }
 
 

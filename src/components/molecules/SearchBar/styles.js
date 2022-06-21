@@ -9,7 +9,7 @@ const SearchBarWrapper = styled.div`
   height: 3.2rem;
   border: none;
   padding-inline-end: 0.8rem;
-  flex-shrink: 2;
+  flex-shrink: 5;
 
   input {
     flex-grow: 1;
@@ -23,6 +23,8 @@ const SearchBarWrapper = styled.div`
     width: 1.6rem;
     height: 1.6rem;
   }
+
+ 
 `
 
 export default SearchBarWrapper
