@@ -1,7 +1,7 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const ContactFormWrapper = styled.section`
-  background-color: #3C3E40;
+  background-color: #3c3e40;
   height: 35.2rem;
   form {
     height: 100%;
@@ -10,22 +10,32 @@ const ContactFormWrapper = styled.section`
     align-items: center;
     justify-content: space-around;
 
+    @media (max-width: 475px) {
+      padding-inline: 1rem;
+    }
     .heading {
-      color: #FDFDFD;
+      color: #fdfdfd;
       font-size: 2.4rem;
       line-height: 2.813rem;
+      @media (max-width: 475px) {
+        width: 27.8rem;
+      }
     }
     .controlInputs {
       display: flex;
       gap: 1.8rem;
+      @media (max-width: 475px) {
+        flex-direction: column;
+        align-items: center;
+      }
     }
 
     input {
       width: 27.8rem;
       height: 3.2rem;
-      background-color: #FDFDFD;
+      background-color: #fdfdfd;
       border-radius: 0.4rem;
-      color: #3C3E40;
+      color: #3c3e40;
       font-size: 1.4rem;
       padding-inline: 0.5rem;
       outline: none;
@@ -37,13 +47,16 @@ const ContactFormWrapper = styled.section`
     background-color: ${({ theme }) => theme.accentColor};
     width: 26.6rem;
     height: 4.2rem;
-    color: #FDFDFD;
+    color: #fdfdfd;
     border-radius: 0.8rem;
     font-size: 1.6rem;
     font-weight: 400;
     line-height: 1.9rem;
     border: none;
+    @media (max-width: 475px) {
+      width: 27.8rem;
+    }
   }
-`
+`;
 
-export default ContactFormWrapper
+export default ContactFormWrapper;
