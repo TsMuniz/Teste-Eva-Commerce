@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const ProductCardWrapper = styled.div`
   width: 23.6rem;
@@ -12,7 +12,7 @@ const ProductCardWrapper = styled.div`
   &:hover {
     box-shadow: 0 0 1px 1px ${({ theme }) => theme.accentColor};
   }
-  
+
   .product_image_container {
     width: 20rem;
     height: 23.6rem;
@@ -29,7 +29,7 @@ const ProductCardWrapper = styled.div`
   .product_details_container {
     display: flex;
     flex-direction: column;
-    background-color: #F7FAFF;
+    background-color: #f7faff;
     width: 23.6rem;
     height: 15.8rem;
 
@@ -40,7 +40,7 @@ const ProductCardWrapper = styled.div`
       margin-top: 0.8rem;
       font-size: 1.4rem;
       font-weight: 300;
-      color: #6A6D6F;
+      color: #6a6d6f;
     }
 
     .product_price_container {
@@ -49,13 +49,13 @@ const ProductCardWrapper = styled.div`
       align-self: center;
 
       p {
-        color: #6A6D6F;
+        color: #6a6d6f;
         height: 1.4rem;
         font-size: 1.2rem;
         text-decoration: line-through;
         align-self: flex-end;
       }
-  
+
       h2 {
         font-size: 3.2rem;
         font-weight: 700;
@@ -63,7 +63,6 @@ const ProductCardWrapper = styled.div`
         margin-bottom: 0.4rem;
         align-self: center;
       }
-
     }
 
     span {
@@ -72,19 +71,22 @@ const ProductCardWrapper = styled.div`
       margin-bottom: 0.4rem;
       font-size: 1rem;
     }
-
-    
   }
   .product_button_container {
-    background-color: #F7FAFF;
+    background-color: #f7faff;
     transition: 0.2s;
     flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: inherit;
 
     button {
       align-self: center;
       width: 22.8rem;
       height: 4.2rem;
-      color: #FDFDFD;
+      color: #fdfdfd;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -95,7 +97,40 @@ const ProductCardWrapper = styled.div`
       font-weight: 400;
       line-height: 19px;
     }
-  
   }
-`
-export default ProductCardWrapper
+
+  .product_button_container_tablet_and_mobile_resolution {
+    background-color: #f7faff;
+    transition: 0.2s;
+    flex-grow: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: inherit;
+
+    button {
+      align-self: center;
+      width: 22.8rem;
+      height: 4.2rem;
+      color: #fdfdfd;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: ${({ theme }) => theme.accentColor};
+      border: none;
+      border-radius: 0.8rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 19px;
+    }
+    @media (min-width: 769px) {
+      display: none;
+    }
+  }
+  @media (max-width: 769px) {
+    box-shadow: 1px 1px 3px 0px rgba(0, 0, 0, 0.5);
+    border-style: inset;
+  }
+`;
+export default ProductCardWrapper;

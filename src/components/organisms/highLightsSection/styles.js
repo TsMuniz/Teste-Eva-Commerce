@@ -1,6 +1,6 @@
-import styled from 'styled-components'
+import styled from "styled-components";
 
 const HighLightsSectionWrapper = styled.section`
-  
-`
-export default HighLightsSectionWrapper
+  margin-bottom: 5rem;
+`;
+export default HighLightsSectionWrapper;

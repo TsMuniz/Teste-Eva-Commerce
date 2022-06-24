@@ -8,11 +8,11 @@ import HeaderWrapper from './styles'
 
 const bb = ['bebeza', 'ibiza' , 'peloponezo','payday']
 
-export default function Header() {
+export default function Header({categories}) {
   return (
     <HeaderWrapper>
       <Logo />
-      <CategoryDropDownList categories={bb} />
+      <CategoryDropDownList categories={categories} />
       <SearchBar />
       <MyAcount />
       <Cart quantity="0" />

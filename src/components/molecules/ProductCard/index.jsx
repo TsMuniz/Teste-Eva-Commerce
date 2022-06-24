@@ -43,6 +43,11 @@ export default function ProductCard(
           </button>
         </div>
       )}
+      <div className='product_button_container_tablet_and_mobile_resolution'>
+        <button>
+          Comprar
+        </button>
+      </div>
     </ProductCardWrapper>
   )
 

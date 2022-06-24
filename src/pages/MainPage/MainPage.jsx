@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react'
+import Benefits from '../../components/molecules/Benefits'
+import CategoriesSection from '../../components/molecules/CategoriesSection'
 import Banner from '../../components/organisms/Banner'
+import ContactForm from '../../components/organisms/ContactForm'
 import Header from '../../components/organisms/Header'
+import HighLightsSection from '../../components/organisms/highLightsSection'
 import { getAllCategories, getAllProducts, URL } from '../../services/Api'
 import MainPageTemplate from '../../templates/MainPageTemplate'
-
 
 
 export default function MainPage() {
@@ -37,6 +40,21 @@ export default function MainPage() {
     <MainPageTemplate>
       <Header categories={ categories } />      
       <Banner />
+      <Benefits />
+      <CategoriesSection />
+      <HighLightsSection
+        category="all"
+        products={ products }
+      />
+      {categories.map((category) => {
+        return (
+          <HighLightsSection
+            category={category}
+          products={ listCategoryHighLights(category, products) }
+          />
+        )
+      })}
+      <ContactForm/>
     </MainPageTemplate>
   )
 }
