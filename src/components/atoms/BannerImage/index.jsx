@@ -5,5 +5,9 @@ export default function BannerImage({image}) {
     <div>
       <img src={image} alt="asdasd" />
     </div>
+    <div className='title_wrapper'>
+      <h1>Seu livros favoritos </h1>
+      <h3>estão te esperando aqui!</h3>
+    </div>
   </ImageWrapper>
 }

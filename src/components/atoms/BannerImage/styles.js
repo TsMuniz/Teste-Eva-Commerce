@@ -5,6 +5,39 @@ const ImageWrapper = styled.div`
   position: relative;
   display: flex;
 
+  .title_wrapper {
+    left: 16.4rem;
+    top: 12.6rem;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 3;
+    h1 {
+      font-size: 4.2rem;
+      color: #fdfdfd;
+      font-weight: 400;
+      line-height: 4.9rem;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    h3 {
+      font-size: 2.4rem;
+      color: #fdfdfd;
+      font-weight: 400;
+      line-height: 2.8rem;
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    @media (max-width: 768px) {
+      left: 1rem;
+      h1 {
+        font-size: 3.2rem;
+      }
+      h3 {
+        font-size: 2rem;
+      }
+    }
+  }
+
   div {
     width: 100%;
     @media (max-width: 475px) {
