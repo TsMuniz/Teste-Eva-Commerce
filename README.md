@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Bem vindo ao Eva Commerce
 
 <img src="/src/assets/images/evagit.png">
 
