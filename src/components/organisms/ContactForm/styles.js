@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 const ContactFormWrapper = styled.section`
   background-color: #3c3e40;
@@ -30,17 +30,6 @@ const ContactFormWrapper = styled.section`
       }
     }
 
-    input {
-      width: 27.8rem;
-      height: 3.2rem;
-      background-color: #fdfdfd;
-      border-radius: 0.4rem;
-      color: #3c3e40;
-      font-size: 1.4rem;
-      padding-inline: 0.5rem;
-      outline: none;
-      border: none;
-    }
   }
 
   button {

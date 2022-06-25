@@ -100,6 +100,7 @@ const ProductCardWrapper = styled.div`
       border-radius: 0.8rem;
       font-size: 1.6rem;
       font-weight: 400;
+      cursor: pointer;
       line-height: 1.9rem;
     }
 
@@ -132,6 +133,7 @@ const ProductCardWrapper = styled.div`
       font-size: 1.6rem;
       font-weight: 400;
       line-height: 19px;
+      cursor: pointer;
     }
     @media (min-width: 769px) {
       display: none;

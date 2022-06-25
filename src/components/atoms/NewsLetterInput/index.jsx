@@ -7,7 +7,7 @@ export default function NewsLetterInput({
   errorMessage
 }) {
   return (
-    <InputWrapper>
+    <InputWrapper error={errorMessage}>
       <p>{errorMessage}</p>
       <input
         {...register(`${name}`)}

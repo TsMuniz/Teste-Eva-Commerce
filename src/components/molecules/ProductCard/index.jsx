@@ -17,6 +17,7 @@ export default function ProductCard(
     const discountValue = price * (discountRate / 100)
     return price - discountValue
   }
+
   return (
     <ProductCardWrapper
       onMouseOver={() => setShowButton(true)}
@@ -36,7 +37,10 @@ export default function ProductCard(
           <h2>{`R$ ${Number(currentPrice).toFixed(2)}`}</h2>
         </div>
 
-        <span>{`Ou R$ ${getPriceWithDiscount(currentPrice, discount).toFixed(2)} com ${discount}% off no boleto`}</span>
+        <span>
+          {`Ou R$ ${getPriceWithDiscount(currentPrice, discount)
+            .toFixed(2)} com ${discount}% off no boleto`}
+        </span>
       </div>
       {showButton && (
         <div className='product_button_container'>
