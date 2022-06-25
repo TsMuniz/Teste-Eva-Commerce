@@ -100,9 +100,9 @@ const ProductCardWrapper = styled.div`
       border-radius: 0.8rem;
       font-size: 1.6rem;
       font-weight: 400;
-      line-height: 19px;
+      line-height: 1.9rem;
     }
-    
+
     @media (max-width: 768px) {
       display: none;
     }

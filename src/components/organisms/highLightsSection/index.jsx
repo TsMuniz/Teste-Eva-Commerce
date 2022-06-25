@@ -30,7 +30,7 @@ export default function HighLightsSection({ category, products }) {
                   product.promotional_price === null
                     ? product.price
                     : product.promotional_price}
-                discount
+                discount={product?.categories.bankslip_discount}
               />
             )
           })

@@ -2,11 +2,12 @@ import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from 'react-hook-form'
 import * as yup from "yup"
 import newsletter from '../../../assets/svg/newsletter.svg'
+import NewsLetterInput from '../../atoms/NewsLetterInput'
 import ContactFormWrapper from './styles'
 
 
 export default function ContactForm() {
-  const onlyLetters = /^[abcdefghijklmnopqrstuvçwxyz]+$/i;
+  const onlyLetters = /^[abcdefghijklmnopqrstuvçwxyz]+$/i
 
   const schema = yup.object({
     name: yup
@@ -18,13 +19,13 @@ export default function ContactForm() {
       .string('Email invalido!')
       .required('Campo Obrigatório!')
       .email('Email inválido!'),
-  }).required();
+  }).required()
 
   const {
     register,
     handleSubmit,
     formState: { errors }
-  } = useForm({resolver: yupResolver(schema)})
+  } = useForm({ resolver: yupResolver(schema) })
 
 
   const onSubmit = (data) => {
@@ -40,20 +41,21 @@ export default function ContactForm() {
         <div className="heading">
           <h2>Receba nossas novidades, descontos e muito mais</h2>
         </div>
-        {errors.name?.message}
         <div className="controlInputs">
-          
-          <input
+          <NewsLetterInput
+            errorMessage={errors.name?.message}
             type="text"
-            className='InputName'
-            placeholder='Digite seu nome'
-            {...register("name")}
+            placeHolder='Digite seu nome'
+            name="name"
+            register={register}
           />
-          <input
+
+          <NewsLetterInput
+            errorMessage={errors.email?.message}
             type="text"
-            className='InputEmail'
-            placeholder='Digite seu Email'
-            {...register("email")}
+            placeHolder='Digite seu Email'
+            name="email"
+            register={register}
           />
         </div>
         <button>Eu quero receber novidades!</button>

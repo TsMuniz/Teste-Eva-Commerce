@@ -12,8 +12,10 @@ export default function ProductCard(
     discount
   }) {
   const [showButton, setShowButton] = useState(false)
-  const getDiscount = () => {
 
+  const getPriceWithDiscount = (price, discountRate) => {
+    const discountValue = price * (discountRate / 100)
+    return price - discountValue
   }
   return (
     <ProductCardWrapper
@@ -34,7 +36,7 @@ export default function ProductCard(
           <h2>{`R$ ${Number(currentPrice).toFixed(2)}`}</h2>
         </div>
 
-        <span>Ou R$ 00,00 com 5% off no boleto</span>
+        <span>{`Ou R$ ${getPriceWithDiscount(currentPrice, discount).toFixed(2)} com ${discount}% off no boleto`}</span>
       </div>
       {showButton && (
         <div className='product_button_container'>
