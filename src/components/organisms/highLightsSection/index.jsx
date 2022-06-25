@@ -3,15 +3,15 @@ import ProductCard from '../../molecules/ProductCard/index'
 import SwiperHighlights from '../../molecules/SwiperHighlights'
 import HighLightsSectionWrapper from './styles'
 
-export default function HighLightsSection({category, products}) {
+export default function HighLightsSection({ category, products }) {
   return (
     <HighLightsSectionWrapper>
-      
+
       {category === 'all'
         ? <HighLightsSectionHeading text="Destaques" />
-        : <HighLightsSectionHeading text={`Destaques em ${category}`}/>     
+        : <HighLightsSectionHeading text={`Destaques em ${category}`} />
       }
-      
+
       <SwiperHighlights>
         {
           products.map((product, index) => {
@@ -22,15 +22,15 @@ export default function HighLightsSection({category, products}) {
                 description={product.name}
                 oldPrice={
                   product.promotional_price === null
-                    ? ''
-                    : product.price
+                    ? null
+                    : Number(product.price)
                 }
                 rating={product.stars}
                 currentPrice={
                   product.promotional_price === null
-                  ? product.price
-                  : product.promotional_price}
-                discount              
+                    ? product.price
+                    : product.promotional_price}
+                discount
               />
             )
           })
