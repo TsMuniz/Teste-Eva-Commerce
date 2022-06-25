@@ -35,7 +35,9 @@ const CategoryListWrapper = styled.div`
  }
 
  @media(max-width: 900px) {
-  display: none;
+  ${({ itsInTheMobileMenu }) => itsInTheMobileMenu
+  ? `display: flex`
+  : `display: none`}
  }
 `
 

@@ -3,20 +3,20 @@ import setaCategorias from '../../../assets/svg/setaCategorias.svg'
 import CategoryDropDownListItem from '../../atoms/CategoryDropDownListItem'
 import CategoryListWrapper from './styles'
 
-export default function CategoryDropDownList({ categories }) {
+export default function CategoryDropDownList({ categories, isMobileMode }) {
   const [showCategoryList, setShowCategoryList] = useState(false)
-
+  console.log(categories)
   const listCategories = (categories) => {
-    
+
     const categoriesList = categories.map((category, index) => (
-      < CategoryDropDownListItem key={`${category}${index}`} category= { category } />)      
+      < CategoryDropDownListItem key={`${category}${index}`} category={category} />)
     )
-      
+
     return categoriesList
   }
 
   return (
-    <CategoryListWrapper>
+    <CategoryListWrapper itsInTheMobileMenu={isMobileMode}>
       <div
         onClick={() => setShowCategoryList(!showCategoryList)}
       >
@@ -33,7 +33,7 @@ export default function CategoryDropDownList({ categories }) {
           </ul>
         )
       }
-      
+
     </CategoryListWrapper>
   )
 }

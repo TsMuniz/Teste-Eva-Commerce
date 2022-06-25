@@ -1,14 +1,16 @@
+import { useState } from 'react'
 import { MdOutlineMenu } from 'react-icons/md'
 import Logo from '../../atoms/logo'
 import Cart from '../../molecules/Cart'
 import CategoryDropDownList from '../../molecules/CategoryDropDownList'
 import MyAcount from '../../molecules/MyAcount'
 import SearchBar from '../../molecules/SearchBar'
+import MobileMenu from '../mobileMenu/MobileMenu'
 import HeaderWrapper from './styles'
 
-const bb = ['bebeza', 'ibiza' , 'peloponezo','payday']
+export default function Header({ categories }) {
+  const [showMobileMenu, setShowMobileMenu] = useState(false)
 
-export default function Header({categories}) {
   return (
     <HeaderWrapper>
       <Logo />
@@ -16,7 +18,15 @@ export default function Header({categories}) {
       <SearchBar />
       <MyAcount />
       <Cart quantity="0" />
-      <MdOutlineMenu className='menuMobileIcon'/>
-   </HeaderWrapper>
+      <MdOutlineMenu
+        onClick={setShowMobileMenu}
+        className='menuMobileIcon'
+      />
+      <MobileMenu
+        visible={showMobileMenu}
+        setVisible={() => setShowMobileMenu(!showMobileMenu)}
+        categories={categories}
+      />
+    </HeaderWrapper>
   )
 }
