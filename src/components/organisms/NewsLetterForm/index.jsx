@@ -32,7 +32,12 @@ export default function NewsLetterForm() {
   const onSubmit = (data) => {
     toast(
       `Obrigado por se cadastrar em nossa newsLetter ${data.name}. Em breve
-        você ficará por dentro de todas as nossas novidades!`)
+        você ficará por dentro de todas as nossas novidades!`,
+      {
+        position: toast.POSITION.BOTTOM_RIGHT,
+        className: 'foo-bar'
+      }
+    )
   }
 
   return (
