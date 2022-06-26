@@ -40,7 +40,7 @@ const SwiperHighlightsWrapper = styled.div`
     scroll-behavior: smooth;
     gap: 1.2rem;
     padding-block: 0.5rem;
-
+    
     &::-webkit-scrollbar {
       display: none;
     }

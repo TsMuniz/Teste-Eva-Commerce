@@ -60,6 +60,7 @@ const NewsLetterFormWrapper = styled.section`
     font-weight: 400;
     line-height: 1.9rem;
     border: none;
+    cursor: pointer;
 
     @media (max-width: 475px) {
       width: 27.8rem;

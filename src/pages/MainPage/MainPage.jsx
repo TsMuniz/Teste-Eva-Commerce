@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css'
 import Benefits from '../../components/molecules/Benefits'
 import CategoriesSection from '../../components/molecules/CategoriesSection'
 import Banner from '../../components/organisms/Banner'
+import Footer from '../../components/organisms/Footer'
 import Header from '../../components/organisms/Header'
 import HighLightsSection from '../../components/organisms/highLightsSection'
 import NewsLetterForm from '../../components/organisms/NewsLetterForm'
@@ -54,6 +55,7 @@ export default function MainPage() {
         )
       })}
       <NewsLetterForm />
+      <Footer />
       <ToastContainer />
     </MainPageTemplate>
   )

@@ -3,15 +3,16 @@ import { IoIosArrowBack } from 'react-icons/io'
 import SwiperHighlightsWrapper from './styles'
 
 
-export default function SwiperHighlights({children}) {
+export default function SwiperHighlights({ children }) {
   const swiper = useRef(null)
-  
+
   const SwipeToLeft = () => {
     swiper.current.scrollLeft += swiper.current.offsetWidth
   }
 
   const SwipeToRight = () => {
     swiper.current.scrollLeft -= swiper.current.offsetWidth
+
   }
 
   return (
@@ -19,7 +20,7 @@ export default function SwiperHighlights({children}) {
       <IoIosArrowBack
         className='arrow_left'
         onClick={SwipeToRight}
-      /> 
+      />
 
       <div ref={swiper} className="swiper">
         {children}

@@ -34,12 +34,12 @@ export default function ProductCard(
         <Rating rating={rating} />
 
         <div className="product_price_container">
-          <p>{oldPrice ? oldPrice.toFixed(2) : null}</p>
-          <h2>{`R$ ${Number(currentPrice).toFixed(2)}`}</h2>
+          <p>{oldPrice ? oldPrice.toFixed(2).replace('.', ',') : null}</p>
+          <h2>{`R$ ${Number(currentPrice).toFixed(2).replace('.', ',')}`}</h2>
         </div>
         <span>
           {`Ou R$ ${getPriceWithDiscount(currentPrice, discount)
-            .toFixed(2)} com ${discount}% off no boleto`}
+            .toFixed(2).replace('.', ',')} com ${discount}% off no boleto`}
         </span>
 
       </div>

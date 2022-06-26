@@ -4,6 +4,8 @@ import SwiperHighlights from '../../molecules/SwiperHighlights'
 import HighLightsSectionWrapper from './styles'
 
 export default function HighLightsSection({ category, products }) {
+
+
   return (
     <HighLightsSectionWrapper>
 
