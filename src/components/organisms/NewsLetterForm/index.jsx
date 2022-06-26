@@ -1,5 +1,6 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from 'react-hook-form'
+import { toast } from 'react-toastify'
 import * as yup from 'yup'
 import newsletter from '../../../assets/svg/newsletter.svg'
 import NewsLetterInput from '../../atoms/NewsLetterInput'
@@ -29,7 +30,9 @@ export default function NewsLetterForm() {
 
 
   const onSubmit = (data) => {
-    console.log(data)
+    toast(
+      `Obrigado por se cadastrar em nossa newsLetter ${data.name}. Em breve
+        você ficará por dentro de todas as nossas novidades!`)
   }
 
   return (

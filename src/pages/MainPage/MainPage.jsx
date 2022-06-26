@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 import Benefits from '../../components/molecules/Benefits'
 import CategoriesSection from '../../components/molecules/CategoriesSection'
 import Banner from '../../components/organisms/Banner'
@@ -7,7 +9,6 @@ import HighLightsSection from '../../components/organisms/highLightsSection'
 import NewsLetterForm from '../../components/organisms/NewsLetterForm'
 import { getAllCategories, getAllProducts, URL } from '../../services/Api'
 import MainPageTemplate from '../../templates/MainPageTemplate'
-
 
 export default function MainPage() {
   const [categories, setCategories] = useState([])
@@ -53,6 +54,7 @@ export default function MainPage() {
         )
       })}
       <NewsLetterForm />
+      <ToastContainer />
     </MainPageTemplate>
   )
 }

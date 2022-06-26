@@ -14,7 +14,10 @@ const NewsLetterFormWrapper = styled.section`
     @media (max-width: 475px) {
       padding-inline: 1rem;
     }
-
+    .logo {
+      width: 6rem;
+      height: 6rem;
+    }
     .heading {
       color: #fdfdfd;
       font-size: 2.4rem;
