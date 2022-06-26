@@ -1,12 +1,12 @@
 import { yupResolver } from '@hookform/resolvers/yup'
 import { useForm } from 'react-hook-form'
-import * as yup from "yup"
+import * as yup from 'yup'
 import newsletter from '../../../assets/svg/newsletter.svg'
 import NewsLetterInput from '../../atoms/NewsLetterInput'
-import ContactFormWrapper from './styles'
+import NewsLetterFormWrapper from './styles'
 
 
-export default function ContactForm() {
+export default function NewsLetterForm() {
   const onlyLetters = /^[abcdefghijklmnopqrstuvçwxyz]+$/i
 
   const schema = yup.object({
@@ -14,7 +14,7 @@ export default function ContactForm() {
       .string('Nome invalido!')
       .required('Campo Obrigatório!')
       .matches(onlyLetters, 'Apenas letras são permitidas')
-      .min(4, 'Seu nome de usuário deve conter no minimo 4 letras'),
+      .min(4, 'Seu nome deve conter no minimo 4 letras'),
     email: yup
       .string('Email invalido!')
       .required('Campo Obrigatório!')
@@ -33,7 +33,7 @@ export default function ContactForm() {
   }
 
   return (
-    <ContactFormWrapper>
+    <NewsLetterFormWrapper>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="logo">
           <img src={newsletter} alt="ícone de uma carta na cor branca" />
@@ -60,6 +60,6 @@ export default function ContactForm() {
         </div>
         <button>Eu quero receber novidades!</button>
       </form>
-    </ContactFormWrapper>
+    </NewsLetterFormWrapper>
   )
 }
