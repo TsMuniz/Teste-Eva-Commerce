@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { ToastContainer } from 'react-toastify'
-import 'react-toastify/dist/react-toastify.css'
+import 'react-toastify/dist/ReactToastify.css'
 import Benefits from '../../components/molecules/Benefits'
 import CategoriesSection from '../../components/molecules/CategoriesSection'
 import Banner from '../../components/organisms/Banner'
