@@ -1,12 +1,14 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 const CategorriesSectionItemWrapper = styled.div`
   width: 23rem;
   height: 25.6rem;
   position: relative;
+
   img {
     width: 100%;
   }
+
   h3 {
     position: absolute;
     font-weight: 700;
@@ -34,6 +36,7 @@ const CategorriesSectionItemWrapper = styled.div`
     width: 11rem;
     height: 13.6rem;
   }
+  
   @media (max-width: 320px) {
     width: 9.5rem;
     height: 12.1rem;

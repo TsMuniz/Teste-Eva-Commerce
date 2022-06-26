@@ -28,6 +28,7 @@ const MenuMobileWrapper = styled.div`
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    
     span {
       display: flex;
       font-size: 1.6rem;

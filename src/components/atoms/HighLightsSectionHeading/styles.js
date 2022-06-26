@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 const HighLightsSectionHeadingWrapper = styled.div`
   h3 {
@@ -18,9 +18,11 @@ const HighLightsSectionHeadingWrapper = styled.div`
       height: 0;
       border: 2px solid ${({ theme }) => theme.accentColor};
     }
+
     @media (max-width: 1024px) {
       margin-left: 3rem;
     }
+    
     @media (max-width: 768px) {
       margin-left: 1rem;
     }

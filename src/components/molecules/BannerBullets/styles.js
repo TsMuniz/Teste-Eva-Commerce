@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 const BulletsWrapper = styled.div`
   display: flex;
@@ -17,11 +17,13 @@ const BulletsWrapper = styled.div`
   @media (max-width: 768px) {
     bottom: 1rem;
   }
+  
   @media (max-width: 475px) {
     img {
       display: none;
     }
   }
+
   @media (max-width: 375px) {
     img {
       display: none;

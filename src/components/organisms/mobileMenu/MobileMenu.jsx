@@ -14,7 +14,6 @@ export default function MobileMenu({
     document.body.style.overflowY = visible ? 'hidden' : 'scroll'
   }, [visible])
 
-  console.log(categories)
   return (
     <MenuMobileWrapper visible={visible}>
 
@@ -43,9 +42,3 @@ export default function MobileMenu({
     </MenuMobileWrapper>
   )
 }
-
-
-  //<a href="#home" onClick={setVisible}>Home</a>
-    //      <a href="#contact" onClick={setVisible} >Contato</a>
-      //    <a href="#habilities"onClick={setVisible} >Habilidades</a>
-        //  <a href="#projects"onClick={setVisible} >Projetos</a>

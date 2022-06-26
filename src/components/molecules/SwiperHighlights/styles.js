@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 const SwiperHighlightsWrapper = styled.div`
   display: flex;
@@ -40,9 +40,11 @@ const SwiperHighlightsWrapper = styled.div`
     scroll-behavior: smooth;
     gap: 1.2rem;
     padding-block: 0.5rem;
+
     &::-webkit-scrollbar {
       display: none;
     }
+    
     @media (max-width: 1024px) {
       gap: 10rem;
     }

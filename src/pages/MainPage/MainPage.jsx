@@ -12,7 +12,7 @@ import MainPageTemplate from '../../templates/MainPageTemplate'
 export default function MainPage() {
   const [categories, setCategories] = useState([])
   const [products, setProducts] = useState([])
-  console.log(categories)
+
   const getCategoriesWithMoreThanThreeElements = (categories) => {
     return categories.filter(({ products }) => products.length >= 4)
       .map(({ name }) => name)
@@ -32,9 +32,7 @@ export default function MainPage() {
 
   }, [])
 
-
   if (!categories || !products) { return null }
-
 
   return (
     <MainPageTemplate>
@@ -58,20 +56,3 @@ export default function MainPage() {
     </MainPageTemplate>
   )
 }
-
-
-     // <Benefits />
-     // <CategoriesSection />
-     // <HighLightsSection
-     //   category="all"
-     //   products={ products }
-     // />
-     // {categories.map((category) => {
-      //  return (
-         // <HighLightsSection
-         //   category={category}
-         //   products={ listCategoryHighLights(category, products) }
-          ///>
-       // )
-     // })}
-     // <ContactForm/>

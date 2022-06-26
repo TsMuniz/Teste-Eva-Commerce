@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from "styled-components"
 
 const ImageWrapper = styled.div`
   width: 100vw;
@@ -12,6 +12,7 @@ const ImageWrapper = styled.div`
     flex-direction: column;
     position: absolute;
     z-index: 3;
+
     h1 {
       font-size: 4.2rem;
       color: #fdfdfd;
@@ -19,6 +20,7 @@ const ImageWrapper = styled.div`
       line-height: 4.9rem;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     }
+    
     h3 {
       font-size: 2.4rem;
       color: #fdfdfd;

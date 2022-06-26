@@ -28,6 +28,7 @@ export default function ProductCard(
       </div>
 
       <div className='product_details_container'>
+
         <h5>{description}</h5>
 
         <Rating rating={rating} />
@@ -36,12 +37,13 @@ export default function ProductCard(
           <p>{oldPrice ? oldPrice.toFixed(2) : null}</p>
           <h2>{`R$ ${Number(currentPrice).toFixed(2)}`}</h2>
         </div>
-
         <span>
           {`Ou R$ ${getPriceWithDiscount(currentPrice, discount)
             .toFixed(2)} com ${discount}% off no boleto`}
         </span>
+
       </div>
+
       {showButton && (
         <div className='product_button_container'>
           <button>
@@ -49,6 +51,7 @@ export default function ProductCard(
           </button>
         </div>
       )}
+
       <div className='product_button_container_tablet_and_mobile_resolution'>
         <button>
           Comprar

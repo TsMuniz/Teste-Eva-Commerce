@@ -3,6 +3,7 @@ import styled from "styled-components"
 const NewsLetterFormWrapper = styled.section`
   background-color: #3c3e40;
   height: 35.2rem;
+
   form {
     height: 100%;
     display: flex;
@@ -13,6 +14,7 @@ const NewsLetterFormWrapper = styled.section`
     @media (max-width: 475px) {
       padding-inline: 1rem;
     }
+
     .heading {
       color: #fdfdfd;
       font-size: 2.4rem;
@@ -21,9 +23,11 @@ const NewsLetterFormWrapper = styled.section`
         width: 27.8rem;
       }
     }
+
     .controlInputs {
       display: flex;
       gap: 1.8rem;
+      
       @media (max-width: 475px) {
         flex-direction: column;
         align-items: center;
@@ -53,6 +57,7 @@ const NewsLetterFormWrapper = styled.section`
     font-weight: 400;
     line-height: 1.9rem;
     border: none;
+
     @media (max-width: 475px) {
       width: 27.8rem;
     }

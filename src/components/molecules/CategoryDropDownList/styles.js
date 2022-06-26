@@ -12,6 +12,7 @@ const CategoryListWrapper = styled.div`
   font-size: 1.6rem;
   align-items: baseline;
   gap: 1rem;
+  
   img {
     width:0.894rem;
     height: 0.522rem;

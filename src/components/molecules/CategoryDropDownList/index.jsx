@@ -5,13 +5,11 @@ import CategoryListWrapper from './styles'
 
 export default function CategoryDropDownList({ categories, isMobileMode }) {
   const [showCategoryList, setShowCategoryList] = useState(false)
-  console.log(categories)
-  const listCategories = (categories) => {
 
+  const listCategories = (categories) => {
     const categoriesList = categories.map((category, index) => (
       < CategoryDropDownListItem key={`${category}${index}`} category={category} />)
     )
-
     return categoriesList
   }
 
