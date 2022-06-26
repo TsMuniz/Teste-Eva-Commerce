@@ -60,5 +60,24 @@ const FooterWrapper = styled.footer`
       }
     }
   }
+  
+  @media(max-width: 768px) {
+    padding-inline: 1rem;
+    height: auto;
+    .footer_bottom {
+      height: auto;
+    }
+  }
+
+  @media(max-width: 425px) {
+    padding-inline: 1rem;
+    height: auto;
+    .footer_bottom {
+      height: auto;
+      flex-direction: column;
+      align-items: baseline;
+      gap: 3rem;
+    }
+  }
 `
 export default FooterWrapper;
