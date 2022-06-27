@@ -60,12 +60,13 @@ const FooterWrapper = styled.footer`
       }
     }
   }
-  
+
   @media(max-width: 768px) {
     padding-inline: 1rem;
     height: auto;
     .footer_bottom {
       height: auto;
+      padding-bottom: 2rem;
     }
   }
 

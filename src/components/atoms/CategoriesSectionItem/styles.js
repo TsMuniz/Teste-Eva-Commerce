@@ -28,17 +28,15 @@ const CategorriesSectionItemWrapper = styled.div`
   }
 
   @media (max-width: 425px) {
-    width: 13rem;
+    width: 31%;
     height: 15.6rem;
   }
 
   @media (max-width: 375px) {
-    width: 11rem;
     height: 13.6rem;
   }
   
   @media (max-width: 320px) {
-    width: 9.5rem;
     height: 12.1rem;
   }
 `;

@@ -16,6 +16,7 @@ const HighLightsSectionHeadingWrapper = styled.div`
       content: "";
       width: 6.4rem;
       height: 0;
+      background-color: ${({ theme }) => theme.accentColor};
       border: 2px solid ${({ theme }) => theme.accentColor};
     }
 
