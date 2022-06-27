@@ -1,6 +1,6 @@
 import ImageWrapper from './styles'
 
-export default function BannerImage({ image }) {
+export default function BannerImage({ image, title, subTitle }) {
   return (
     <ImageWrapper>
       <div>
@@ -8,8 +8,8 @@ export default function BannerImage({ image }) {
       </div>
 
       <div className='title_wrapper'>
-        <h1>Seus livros favoritos </h1>
-        <h3>estão te esperando aqui!</h3>
+        <h1>{title}</h1>
+        <h3>{subTitle}</h3>
       </div>
     </ImageWrapper>
   )

@@ -25,6 +25,7 @@ const FooterWrapper = styled.footer`
         content: '';
         width: 10rem;
         height: 0;
+        background-color: #FDFDFD;
         border: 0.2rem solid #FDFDFD;
         margin-left: 0.2rem;
       }
