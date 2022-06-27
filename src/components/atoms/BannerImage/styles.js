@@ -38,6 +38,18 @@ const ImageWrapper = styled.div`
         font-size: 2rem;
       }
     }
+
+    @media (max-width: 425px) {
+      left: 1rem;
+      h1 {
+        font-size: 2.7rem;
+      }
+      h3 {
+        font-size: 1.5rem;
+        line-height: 0.8rem;
+
+      }
+    }
   }
 
   div {

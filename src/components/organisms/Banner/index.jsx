@@ -58,12 +58,12 @@ export default function Banner() {
         />
         <BannerImage
           image={roupas_banner}
-          title="O melhor do mundo da moda"
+          title="O melhor da moda"
           subTitle="a um click de distância!"
         />
         <BannerImage
           image={games_banner}
-          title="O melhor do mundo dos games"
+          title="Os melhores games"
           subTitle="na palma da sua mão!"
         />
       </div>
