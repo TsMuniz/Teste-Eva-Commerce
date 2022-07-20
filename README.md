@@ -13,7 +13,7 @@ Clone o projeto no github.
 
 Verifique se a versão do node no seu computador é compativel com a versão 16.15.0.
 
-Entre no diretório onde voçê clonou o projeto.
+Entre no diretório onde você clonou o projeto.
 
 Digite o comando `npm install`.
 
@@ -23,7 +23,7 @@ Digite o comando `npm start` e seja feliz.
 
 ## Observações importantes
 
-Primeira vez tentando utilizar design atomico, por isso a componentização do projeto nao está 100%
+Primeira vez utilizando design atômico, por isso a componentização do projeto não está 100%
 
 O codigo ainda não foi refatorado, algumas media queries a mais e erros de indentação ainda estão presentes.
 
