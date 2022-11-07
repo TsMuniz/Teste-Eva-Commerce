@@ -1,4 +1,4 @@
-# Bem vindo ao Eva Commerce
+# Bem vindo ao projeto Eva Commerce
 
 <img src="/src/assets/images/evagit.png">
 
